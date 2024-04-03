@@ -3,10 +3,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Navigation from '../components/navigation'
+import Slide from '../components/slide'
 import SpeakerCard from '../components/speaker-card'
 import NumbersCard from '../components/numbers-card'
 import EventCard from '../components/event-card'
-import Slide from '../components/slide'
 import Footer from '../components/footer'
 import './home.css'
 
@@ -19,10 +19,99 @@ const Home = (props) => {
       </Helmet>
       <Navigation></Navigation>
       <main className="home-main">
-        <div className="home-hero section-container">
+        <div className="home-previous-events section-container">
           <div className="home-max-width max-content-container">
+            <div className="home-heading-container">
+              <h1 className="home-text Heading2">
+                <span>previous events</span>
+              </h1>
+              <span className="home-text02">
+                Take a tour of our previous conferences
+              </span>
+            </div>
+          </div>
+          <div data-type="slider" className="home-slider">
+            <Slide rootClassName="slide-root-class-name4"></Slide>
+            <Slide
+              heading="Slide #2"
+              rootClassName="slide-root-class-name1"
+            ></Slide>
+            <Slide
+              heading="Slide #3"
+              rootClassName="slide-root-class-name"
+            ></Slide>
+            <Slide
+              heading="Slide #4"
+              rootClassName="slide-root-class-name3"
+            ></Slide>
+            <Slide
+              heading="Slide #5"
+              rootClassName="slide-root-class-name2"
+            ></Slide>
+          </div>
+          <div className="home-slider-controls">
+            <div data-action="previousSlide" className="home-go-left">
+              <svg viewBox="0 0 1024 1024" className="home-icon">
+                <path d="M250 176l92-90 426 426-426 426-92-90 338-336z"></path>
+              </svg>
+            </div>
+            <div data-action="nextSlide" className="home-go-right">
+              <svg viewBox="0 0 1024 1024" className="home-icon2">
+                <path d="M250 176l92-90 426 426-426 426-92-90 338-336z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div className="home-hero section-container">
+          <div
+            data-thq="slider"
+            data-pagination="true"
+            data-navigation="true"
+            className="home-slider1 swiper"
+          >
+            <div data-thq="slider-wrapper" className="swiper-wrapper">
+              <div
+                data-thq="slider-slide"
+                className="home-slider-slide swiper-slide"
+              ></div>
+              <div
+                data-thq="slider-slide"
+                className="home-slider-slide1 swiper-slide"
+              ></div>
+              <div
+                data-thq="slider-slide"
+                className="home-slider-slide2 swiper-slide"
+              ></div>
+            </div>
+            <div
+              data-thq="slider-pagination"
+              className="home-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+            >
+              <div
+                data-thq="slider-pagination-bullet"
+                className="swiper-pagination-bullet swiper-pagination-bullet-active"
+              ></div>
+              <div
+                data-thq="slider-pagination-bullet"
+                className="swiper-pagination-bullet"
+              ></div>
+              <div
+                data-thq="slider-pagination-bullet"
+                className="swiper-pagination-bullet"
+              ></div>
+            </div>
+            <div
+              data-thq="slider-button-prev"
+              className="swiper-button-prev"
+            ></div>
+            <div
+              data-thq="slider-button-next"
+              className="swiper-button-next"
+            ></div>
+          </div>
+          <div className="home-max-width1 max-content-container">
             <div className="home-content-container">
-              <h1 className="home-text Heading1">
+              <h1 className="home-text03 Heading1">
                 <span>
                   THE MOST INSIGHTFUL
                   <span
@@ -31,10 +120,10 @@ const Home = (props) => {
                     }}
                   />
                 </span>
-                <span className="home-text02">MARKETING CONFERENCE </span>
+                <span className="home-text05">MARKETING CONFERENCE </span>
                 <span>IN EUROPE</span>
               </h1>
-              <span className="home-text04">
+              <span className="home-text07">
                 <span>GET YOUR TICKETS AT A HALF PRICE UNTIL 10.10.2022.</span>
                 <br></br>
                 <span>HURRY UP, LIMITED NUMBERS AVAILABLE.</span>
@@ -62,8 +151,8 @@ const Home = (props) => {
           <div className="home-blue-background"></div>
         </div>
         <div className="home-sponsors section-container">
-          <div className="home-max-width1 max-content-container">
-            <span className="home-text07">
+          <div className="home-max-width2 max-content-container">
+            <span className="home-text10">
               <span></span>
               <span>proudly sponsored by</span>
             </span>
@@ -102,12 +191,12 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-speakers section-container">
-          <div className="home-max-width2 max-content-container">
-            <div className="home-heading-container">
-              <span className="home-text10">
+          <div className="home-max-width3 max-content-container">
+            <div className="home-heading-container1">
+              <span className="home-text13">
                 16 speakers from 7 countries and 3 continents
               </span>
-              <h1 className="home-text11 Heading2">meet our speakers</h1>
+              <h1 className="home-text14 Heading2">meet our speakers</h1>
             </div>
             <div className="home-speakers-container">
               <SpeakerCard></SpeakerCard>
@@ -158,12 +247,12 @@ const Home = (props) => {
         </div>
         <div className="home-numbers-banner section-container">
           <div className="home-container2 max-content-container">
-            <div className="home-heading-container1">
-              <span className="home-text12">
+            <div className="home-heading-container2">
+              <span className="home-text15">
                 Our 12-year conference history in sharing digital marketing
                 insights
               </span>
-              <h1 className="home-text13 Heading2">
+              <h1 className="home-text16 Heading2">
                 <span>market1 SUMMIT IN NUMBERS</span>
               </h1>
             </div>
@@ -205,22 +294,22 @@ const Home = (props) => {
           />
           <div className="home-content-container1 section-container">
             <div className="home-container3">
-              <span className="home-text15">berlin, germany</span>
-              <span className="home-text16">7-8 MARCH 2023</span>
+              <span className="home-text18">berlin, germany</span>
+              <span className="home-text19">7-8 MARCH 2023</span>
               <div className="home-container4">
-                <span className="home-text17">
+                <span className="home-text20">
                   <span>— mob-x</span>
                 </span>
-                <span className="home-text19">
+                <span className="home-text22">
                   <span>conference</span>
                 </span>
-                <span className="home-text21">
+                <span className="home-text24">
                   <span>center</span>
                 </span>
               </div>
               <div className="home-container5">
-                <span className="home-text23">beautiful, vibrant berlin</span>
-                <span className="home-text24">
+                <span className="home-text26">beautiful, vibrant berlin</span>
+                <span className="home-text27">
                   <span>
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor
                     do amet sint. Velit officia consequat duis enim velit
@@ -247,19 +336,19 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-agenda section-container">
-          <div className="home-max-width3 max-content-container">
-            <div className="home-heading-container2">
-              <h1 className="home-text28 Heading2">
+          <div className="home-max-width4 max-content-container">
+            <div className="home-heading-container3">
+              <h1 className="home-text31 Heading2">
                 <span>key events agenda</span>
               </h1>
-              <span className="home-text30">
+              <span className="home-text33">
                 more announcements are coming soon
               </span>
             </div>
             <div className="home-events-container">
               <div className="home-column">
                 <div className="home-column-header">
-                  <span className="home-text31">
+                  <span className="home-text34">
                     <span>tuesday - 7.03</span>
                   </span>
                   <div className="home-line"></div>
@@ -280,7 +369,7 @@ const Home = (props) => {
               </div>
               <div className="home-column1">
                 <div className="home-column-header1">
-                  <span className="home-text33">
+                  <span className="home-text36">
                     <span>wednesday - 8.03</span>
                   </span>
                   <div className="home-line1"></div>
@@ -308,7 +397,7 @@ const Home = (props) => {
         <div className="home-workshops">
           <div className="home-content-container2">
             <div className="home-container6">
-              <h1 className="home-text35 Heading2">
+              <h1 className="home-text38 Heading2">
                 <span>
                   register for
                   <span
@@ -318,7 +407,7 @@ const Home = (props) => {
                   />
                 </span>
                 <br></br>
-                <span className="home-text38">super insightful</span>
+                <span className="home-text41">super insightful</span>
                 <span>
                   <span
                     dangerouslySetInnerHTML={{
@@ -338,10 +427,10 @@ const Home = (props) => {
                 <br></br>
                 <span>your team</span>
               </h1>
-              <span className="home-text44">
+              <span className="home-text47">
                 get early discounts and group discounts
               </span>
-              <span className="home-text45">
+              <span className="home-text48">
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                 amet sint. Velit officia consequat duis enim velit mollit.
                 Exercitation veniam consequat sunt nostrud amet.
@@ -356,49 +445,6 @@ const Home = (props) => {
             src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIwfHxidXNpbmVzc3xlbnwwfHx8fDE2NDM3MzQ3MjI&amp;ixlib=rb-1.2.1&amp;w=1500"
             className="home-image7"
           />
-        </div>
-        <div className="home-previous-events section-container">
-          <div className="home-max-width4 max-content-container">
-            <div className="home-heading-container3">
-              <h1 className="home-text46 Heading2">
-                <span>previous events</span>
-              </h1>
-              <span className="home-text48">
-                Take a tour of our previous conferences
-              </span>
-            </div>
-          </div>
-          <div data-type="slider" className="home-slider">
-            <Slide rootClassName="slide-root-class-name4"></Slide>
-            <Slide
-              heading="Slide #2"
-              rootClassName="slide-root-class-name1"
-            ></Slide>
-            <Slide
-              heading="Slide #3"
-              rootClassName="slide-root-class-name"
-            ></Slide>
-            <Slide
-              heading="Slide #4"
-              rootClassName="slide-root-class-name3"
-            ></Slide>
-            <Slide
-              heading="Slide #5"
-              rootClassName="slide-root-class-name2"
-            ></Slide>
-          </div>
-          <div className="home-slider-controls">
-            <div data-action="previousSlide" className="home-go-left">
-              <svg viewBox="0 0 1024 1024" className="home-icon">
-                <path d="M250 176l92-90 426 426-426 426-92-90 338-336z"></path>
-              </svg>
-            </div>
-            <div data-action="nextSlide" className="home-go-right">
-              <svg viewBox="0 0 1024 1024" className="home-icon2">
-                <path d="M250 176l92-90 426 426-426 426-92-90 338-336z"></path>
-              </svg>
-            </div>
-          </div>
         </div>
       </main>
       <Footer rootClassName="footer-root-class-name"></Footer>

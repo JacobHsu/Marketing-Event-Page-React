@@ -16,6 +16,9 @@
     "test": "craco test --env=jsdom",
     "eject": "craco eject"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
